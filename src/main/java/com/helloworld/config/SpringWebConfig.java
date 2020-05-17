@@ -1,4 +1,4 @@
-package com.mkyong.helloworld.config;
+package com.helloworld.config;
  
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -11,7 +11,7 @@ import org.springframework.web.servlet.view.JstlView;
  
 @EnableWebMvc
 @Configuration
-@ComponentScan({ "com.mkyong.helloworld.web" })
+@ComponentScan({ "com.helloworld.web" })
 public class SpringWebConfig extends WebMvcConfigurerAdapter {
  
 	@Override

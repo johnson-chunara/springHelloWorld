@@ -1,4 +1,4 @@
-package com.mkyong.helloworld.web;
+package com.helloworld.web;
 
 import java.util.Map;
 
@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.mkyong.helloworld.service.HelloWorldService;
+import com.helloworld.service.HelloWorldService;
 
 @Controller
 public class WelcomeController {
@@ -27,7 +27,7 @@ public class WelcomeController {
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String index(Map<String, Object> model) {
 
-		logger.debug("index() is executed!");
+
 
 		model.put("title", helloWorldService.getTitle(""));
 		model.put("msg", helloWorldService.getDesc());
@@ -38,7 +38,7 @@ public class WelcomeController {
 	@RequestMapping(value = "/hello/{name:.+}", method = RequestMethod.GET)
 	public ModelAndView hello(@PathVariable("name") String name) {
 
-		logger.debug("hello() is executed - $name {}", name);
+
 
 		ModelAndView model = new ModelAndView();
 		model.setViewName("index");
